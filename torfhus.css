@@ -3,15 +3,37 @@ body, html {
   margin: 0;
 }
 
+#LP_DIV_1528299932999 {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 0 65px 50px 0;
+}
+
+#mazdaChatBtn {
+    background-color: #B42019;
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#mazdaChatBtn a {
+    color: #ffffff;
+    text-decoration: none;
+    line-height: 40px;
+}
+
+button:focus {outline:0;}
+
+/*
 .bg {
-  /* The image used */
   background-image: url("./img/Design.PNG");
 
-  /* Full height */
   height: 100%; 
 
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
+*/
