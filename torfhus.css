@@ -1,6 +1,7 @@
 body, html {
   height: 100%;
   margin: 0;
+  font-family: Lato,Helvetica,Arial,sans-serif;
 }
 
 #LP_DIV_1528299932999 {
@@ -22,6 +23,10 @@ body, html {
     color: #ffffff;
     text-decoration: none;
     line-height: 40px;
+}
+
+#mazdaChatBtn a i {
+    padding-right: 7px;
 }
 
 #LP_DIV_1528299932999 div:focus {outline:0;}
