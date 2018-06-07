@@ -4,13 +4,18 @@ body, html {
   font-family: Lato,Helvetica,Arial,sans-serif;
 }
 
-#LP_DIV_1528299932999 {
+#LP_DIV_1528299932999, #LP_DIV_1528386913236 {
     position: fixed;
     bottom: 0;
     right: 0;
     padding: 0 65px 50px 0;
 }
 
+#LP_DIV_1528299932999 div:focus, #LP_DIV_1528386913236 div:focus {
+  outline:0;
+}
+
+/* MAZDA */
 #mazdaChatBtn {
     background-color: #c42f32;
     height: 40px;
@@ -29,7 +34,26 @@ body, html {
     padding-right: 7px;
 }
 
-#LP_DIV_1528299932999 div:focus {outline:0;}
+/* FORD */
+#fordChatBtn {
+    background: -moz-linear-gradient(90deg, #2A3A80 45%, #4B8ACB 65%, #2A3A80 100%);
+    background: -webkit-linear-gradient(90deg, #2A3A80 45%, #4B8ACB 65%, #2A3A80 100%);
+    background: linear-gradient(90deg, #2A3A80 45%, #4B8ACB 65%, #2A3A80 100%);
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#fordChatBtn a {
+    color: #ffffff;
+    text-decoration: none;
+    line-height: 40px;
+}
+
+#fordChatBtn a i {
+    padding-right: 7px;
+}
 
 /*
 .bg {
