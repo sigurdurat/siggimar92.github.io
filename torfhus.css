@@ -4,10 +4,17 @@ body, html {
   font-family: Lato,Helvetica,Arial,sans-serif;
 }
 
-#LP_DIV_1528299932999, #LP_DIV_1528386913236 {
+#LP_DIV_1528299932999 {
     position: fixed;
     bottom: 0;
     right: 0;
+    padding: 0 65px 50px 0;
+}
+
+#LP_DIV_1528386913236 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
     padding: 0 65px 50px 0;
 }
 
