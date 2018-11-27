@@ -1,33 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>  
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116202578-1"></script>
+    <script>
+         window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-116202578-1');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Annata Live Assist</title>
+    <title>All Around</title>
     
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Oxygen|Quicksand|Raleway|Roboto|Tajawal" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="torfhus.css">
+    <link rel="stylesheet" type="text/css" href="allaround.css">
+    <link rel="stylesheet" type="text/css" href="aos.css" />
     <link rel="icon" 
       type="image/png" 
-      href="favicon.ico">
+      href="favicon.png">
 
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous">
     </script>
-    
-    <script type="text/javascript">(function(accountId){window.lpTag=window.lpTag||{};if(typeof window.lpTag._tagCount==="undefined"){window.lpTag={site:accountId,section:lpTag.section||"",autoStart:lpTag.autoStart===false?false:true,ovr:lpTag.ovr||{},_v:"1.6.0",_tagCount:1,protocol:"https:",events:{bind:function(app,ev,fn){lpTag.defer(function(){lpTag.events.bind(app,ev,fn)},0)},trigger:function(app,ev,json){lpTag.defer(function(){lpTag.events.trigger(app,ev,json)},1)}},defer:function(fn,fnType){if(fnType==0){this._defB=this._defB||[];this._defB.push(fn)}else if(fnType==1){this._defT=this._defT||[];this._defT.push(fn)}else{this._defL=this._defL||[];this._defL.push(fn)}},load:function(src,chr,id){var t=this;setTimeout(function(){t._load(src,chr,id)},0)},_load:function(src,chr,id){var url=src;if(!src){url=this.protocol+"//"+(this.ovr&&this.ovr.domain?this.ovr.domain:"lptag.liveperson.net")+"/tag/tag.js?site="+this.site}var s=document.createElement("script");s.setAttribute("charset",chr?chr:"UTF-8");if(id){s.setAttribute("id",id)}s.setAttribute("src",url);document.getElementsByTagName("head").item(0).appendChild(s)},init:function(){this._timing=this._timing||{};this._timing.start=(new Date).getTime();var that=this;if(window.attachEvent){window.attachEvent("onload",function(){that._domReady("domReady")})}else{window.addEventListener("DOMContentLoaded",function(){that._domReady("contReady")},false);window.addEventListener("load",function(){that._domReady("domReady")},false)}if(typeof window._lptStop=="undefined"){this.load()}},start:function(){this.autoStart=true},_domReady:function(n){if(!this.isDom){this.isDom=true;this.events.trigger("LPT","DOM_READY",{t:n})}this._timing[n]=(new Date).getTime()},vars:lpTag.vars||[],dbs:lpTag.dbs||[],ctn:lpTag.ctn||[],sdes:lpTag.sdes||[],ev:lpTag.ev||[]};lpTag.init()}else{window.lpTag._tagCount+=1}var chatEnded=false;window.cafexAssistBootstrap={};window.cafexAssistBootstrap.laBootstrapLoaded=false;window.cafexAssistBootstrap.cobrowseState;window.cafexAssistBootstrap.bootstrapLa=function(cobrowseServer){var oldScript=document.getElementById("assist-cobrowse-bootstrap-script");if(oldScript){oldScript.parentNode.removeChild(oldScript)}var laBootstrapJs=cobrowseServer+"/assist-bootstrap/assist-bootstrap.js";var script=document.createElement("script");script.id="assist-cobrowse-bootstrap-script";script.type="text/javascript";script.src=laBootstrapJs;window.cafexAssistBootstrap.cobrowseBootstrapLoaded=function(){window.cafexAssistBootstrap.laBootstrapLoaded=true;switch(window.cafexAssistBootstrap.cobrowseState){case"accepted":window.cafexAssistBootstrap.cobrowseAccepted(window.cafexAssistBootstrap.agentId);break;case"rejected":window.cafexAssistBootstrap.cobrowseRejected(window.cafexAssistBootstrap.agentId);break}};document.head.appendChild(script)};if(sessionStorage.getItem("cobrowseServer")){window.cafexAssistBootstrap.bootstrapLa(sessionStorage.getItem("cobrowseServer"))}lpTag.events.bind({eventName:"cobrowseOffered",appName:"*",func:function(event){console.log(event);window.cafexAssistBootstrap.cobrowseState="offered";var elements=document.querySelectorAll("[data-assist-a"+event.agentId+"]");var data=JSON.parse(atob(elements[elements.length-1].dataset["assistA"+event.agentId]));console.log(data);var serverUrl=document.createElement("a");serverUrl.href=data.server;var whitelistedRootDomains=[".cafex.com",".liveassistcloud.com",".liveassistfor365.com"];var domainWhitelisted=false;var hostname=serverUrl.hostname;for(var i=0;i<whitelistedRootDomains.length;i++){var expectedRootDomain=whitelistedRootDomains[i];var index=hostname.indexOf(expectedRootDomain);if(index!=-1||index==hostname.length-expectedRootDomain.length){domainWhitelisted=true;break}}if(!domainWhitelisted){console.log("Unexpected cobrowse domain "+hostname+" aborting cobrowse.");return}sessionStorage.setItem("cobrowseServer",data.server);window.cafexAssistBootstrap.bootstrapLa(data.server)},async:true});lpTag.events.bind({eventName:"cobrowseAccepted",appName:"*",func:function(event){console.log(event);window.cafexAssistBootstrap.cobrowseState="accepted";window.cafexAssistBootstrap.agentId=event.agentId;if(window.cafexAssistBootstrap.laBootstrapLoaded){window.cafexAssistBootstrap.cobrowseAccepted(event.agentId)}},async:true});lpTag.events.bind({eventName:"cobrowseDeclined",appName:"*",func:function(event){console.log(event);window.cafexAssistBootstrap.cobrowseState="rejected";window.cafexAssistBootstrap.agentId=event.agentId;if(window.cafexAssistBootstrap.laBootstrapLoaded){window.cafexAssistBootstrap.cobrowseRejected(event.agentId)}},async:true});function loadChime(){let chimeData=JSON.parse(localStorage.getItem("chimeData"));let bootstrapJs=chimeData.bootstrapJs;verifyJsDomain(bootstrapJs);let scriptTag=document.getElementById("chime-bootstrap");if(!scriptTag){scriptTag=document.createElement("script")}scriptTag.src=bootstrapJs;document.body.appendChild(scriptTag)}lpTag.events.bind({eventName:"state",appName:"*",func:function(event){if(event.state=="ended"){chatEnded=true}if(event.state=="resume"){var chimeData=localStorage.getItem("chimeData");if(chimeData){loadChime()}}},async:true});function verifyJsDomain(bootstrapJs){let jsLink=document.createElement("a");jsLink.href=bootstrapJs;let bootstrapHost=jsLink.hostname;return bootstrapHost.substr(bootstrapHost.length-"liveassistfor365.com".length)==="liveassistfor365.com"}function rejectChime(chimeServer,meetingId){let deleteReq=new XMLHttpRequest;let meetingUrl=chimeServer+"/api/meeting/"+meetingId;deleteReq.open("DELETE",meetingUrl);deleteReq.send()}document.addEventListener("click",function(event){if(!chatEnded){if(event.target.dataset&&(void 0!==event.target.dataset.chimeAccept||void 0!==event.target.dataset.chimeReject)){let elements=document.querySelectorAll("[data-chime]");let chimeData=JSON.parse(atob(elements[elements.length-1].dataset["chime"]));meetingId=chimeData.meetingId,chimeServer=chimeData.server,guestId=chimeData.guestId,bootstrapJs=chimeData.bootstrapJs;if(verifyJsDomain(bootstrapJs)){if(void 0!==event.target.dataset.chimeAccept){localStorage.setItem("chimeData",JSON.stringify({meetingId:meetingId,guestId:guestId,chimeServer:chimeServer,bootstrapJs:bootstrapJs}));loadChime()}else if(void 0!==event.target.dataset.chimeReject){rejectChime(chimeServer,meetingId)}}else{console.log("Chime javascript domain unverified "+bootstrapJs+" aborting.")}}}})})("33279050");</script>
 
-
-    <!-- <script type='text/javascript' src='torfhus.js'></script> -->
+    <script type='text/javascript' src='allaround.js'></script>
 </head>
 <body>
-    <!--<div class="bg"></div>-->
-    <div id="LP_DIV_1528299932999"></div> <!-- Mazda -->
-    <div id="LP_DIV_1528386913236"></div> <!-- Ford -->
+
+    <div class="icon-container">
+      <img class="icon" src="./img/logo.png" />
+    </div>
+
+    <div class="main">		
+      <section class="um-okkur dark-grey">
+        <div class="um-okkur-container">
+          <h1>Hvað er All Around?</h1>
+          <p>All Around er hugbúnaðarfyrirtæki sem tekur að sér allskonar forritunarverkefni. Allt frá vefsíðum og öppum yfir í almennan hugbúnað.</p>
+          <a href="mailto:hi@allaround.is?subject=Fyrirspurn af vef"><button id="contactBtn" class="aa-btn-white">Heyrðu í okkur</button></a>
+        </div>
+      </section>
+          
+      <section class="verkefni">
+        <!-- <h1 class="title">Verkefni</h1> -->
+        <div class="row white">
+          <div class="image-section left" data-aos="fade-up" data-aos-duration="500">
+            <img src="./img/rvkfit-imac.png" />
+          </div>
+          
+          <div class="text-section right" data-aos="fade-in" data-aos-duration="500">
+            <h1 class="section-title"><a href="https://www.rvkfit.is" target="_blank">Rvk Fit</a></h1>
+            <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin cursus non ligula quis viverra. Aliquam lobortis lectus lectus, vitae efficitur odio efficitur ac. Mauris facilisis, nibh quis lacinia fringilla, eros ipsum viverra odio, quis egestas nulla tellus in urna. Donec ut mollis erat. Pellentesque molestie neque libero, ac rhoncus elit mattis nec. In hac habitasse platea dictumst. Duis posuere sapien quis massa blandit, sit amet aliquam neque luctus.</p>
+          </div>
+        </div>
+
+        <div class="row grey">
+          <div class="text-section left" data-aos="fade-in" data-aos-duration="500">
+            <h1 class="section-title"><a href="https://www.rabbarbarinn.is" target="_blank">Rabbar Barinn</a></h1>
+            <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin cursus non ligula quis viverra. Aliquam lobortis lectus lectus, vitae efficitur odio efficitur ac. Mauris facilisis, nibh quis lacinia fringilla, eros ipsum viverra odio, quis egestas nulla tellus in urna. Donec ut mollis erat. Pellentesque molestie neque libero, ac rhoncus elit mattis nec. In hac habitasse platea dictumst. Duis posuere sapien quis massa blandit, sit amet aliquam neque luctus.</p>
+          </div>
+
+          <div class="image-section right" data-aos="fade-up" data-aos-duration="500">
+            <img src="./img/rabbarbarinn-macbook.png" />
+          </div>
+        </div>
+
+        <div class="row white">
+          <div class="image-section left" data-aos="fade-up" data-aos-duration="500">
+            <img src="./img/ipad-fjelagid.png" />
+          </div>
+          
+          <div class="text-section right" data-aos="fade-in" data-aos-duration="500">
+            <h1 class="section-title"><a href="https://www.fjelagid.is" target="_blank">Fjelagið Hárstofa</a></h1>
+            <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin cursus non ligula quis viverra. Aliquam lobortis lectus lectus, vitae efficitur odio efficitur ac. Mauris facilisis, nibh quis lacinia fringilla, eros ipsum viverra odio, quis egestas nulla tellus in urna. Donec ut mollis erat. Pellentesque molestie neque libero, ac rhoncus elit mattis nec. In hac habitasse platea dictumst. Duis posuere sapien quis massa blandit, sit amet aliquam neque luctus.</p>
+          </div>
+        </div>
+
+        <div class="row grey">
+            <div class="text-section left" data-aos="fade-in" data-aos-duration="500">
+                <h1 class="section-title"><a href="http://www.fifateams.com" target="_blank">Fifa Randomizer</a></h1>
+                <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin cursus non ligula quis viverra. Aliquam lobortis lectus lectus, vitae efficitur odio efficitur ac. Mauris facilisis, nibh quis lacinia fringilla, eros ipsum viverra odio, quis egestas nulla tellus in urna. Donec ut mollis erat. Pellentesque molestie neque libero, ac rhoncus elit mattis nec. In hac habitasse platea dictumst. Duis posuere sapien quis massa blandit, sit amet aliquam neque luctus.</p>
+            </div>
+    
+            <div class="image-section right" data-aos="fade-up" data-aos-duration="500">
+                <img src="./img/fifa-iphone.png" />
+            </div>
+          </div>
+      </section>
+
+      <!-- <section class="hafa-samband dark-grey">
+
+      </section> -->
+
+    </div>
+
+    <footer class="site-footer">
+		<div class="site-info">
+			<p>All Around Software | <a href="mailto:hi@allaround.is?subject=Fyrirspurn af vef">hi@allaround.is</a></p>
+		</div>
+  </footer>
+  
+  <!-- https://michalsnik.github.io/aos/ -->
+  <script src="aos.js"></script>
+  <script>
+    AOS.init({
+      easing: 'ease-in-out-sine'
+    });
+  </script>
 </body>
 </html>
