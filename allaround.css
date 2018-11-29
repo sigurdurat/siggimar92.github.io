@@ -13,6 +13,7 @@ a:focus, button:focus {
 a {
   color: inherit;
   text-decoration: none;
+  transition: 0.2s linear all;
 }
 
 a:hover {
