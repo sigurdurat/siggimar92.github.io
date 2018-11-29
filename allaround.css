@@ -395,4 +395,8 @@ a:hover {
   .icon-container {
     width: 100%;
   }
+
+  .icon-container--small {
+    width: 70px;
+  }
 }
