@@ -30,6 +30,12 @@ a:hover {
   float: right;
 }
 
+.container {
+  max-width: 1280px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
 .main {
   /* margin-bottom: 850px; */
   margin-bottom: 150px;
@@ -73,7 +79,7 @@ a:hover {
 }
 
 .row {
-  height: 700px;
+  min-height: 400px;
   width: 100%;
   padding: 50px;
   box-sizing: border-box;
@@ -126,7 +132,7 @@ a:hover {
 }
 
 .image-section > img {
-  max-height: 80%;
+  max-height: 450px;
   position: relative;
   max-width: 100%;
   display: block;
@@ -143,7 +149,7 @@ a:hover {
 
 .um-okkur {
   position: relative;
-  height: 600px;
+  min-height: 600px;
   /* background-color: #232425; */
   /* background-image: linear-gradient(150deg, #ff7070, #ff5757); */
   z-index: 1;
@@ -155,7 +161,7 @@ a:hover {
 
 .um-okkur-container {
   display: block;
-  margin: 0 auto;
+  margin: 150px auto;
   max-width: 500px;
 }
 
@@ -198,7 +204,6 @@ a:hover {
 
 .verkefni {
   position: relative;
-  height: 2800px;
   background-color: #ffffff;
   z-index: 1;
   padding-top: 50px;
@@ -362,16 +367,27 @@ a:hover {
 
 /* Media queries */
 @media screen and (max-width: 768px) {
-  .aa-hamburger-menu {
-    display: block;
+  .image-section {
+    width: 100%;
+    padding: 25px 0;
   }
 
-  .aa-nav-items {
-    display: none;
+  .text-section {
+    width: 100%;
+    padding: 25px 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .um-okkur-container {
+    width: 80%;
   }
 
-  .image-wrapper {
-    height: 30vh;
-    width: calc(100% * (1/2));
+  h1 {
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 14px;
   }
 }

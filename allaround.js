@@ -6,7 +6,7 @@ $(document).ready(function() {
         scrollTop: 0
     }, 800);
 
-    var scrollHeight = 570 - 70;
+    var scrollHeight = document.getElementById('umOkkur').offsetHeight - 70;
     var isExpanded = true;
     $(window).scroll(function() {
 
