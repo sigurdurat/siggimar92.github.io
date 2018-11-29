@@ -391,4 +391,8 @@ a:hover {
   p {
     font-size: 14px;
   }
+
+  .icon-container {
+    width: 100%;
+  }
 }
