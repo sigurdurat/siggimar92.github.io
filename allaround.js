@@ -6,7 +6,9 @@ $(document).ready(function() {
         scrollTop: 0
     }, 800);
 
-    var scrollHeight = document.getElementById('umOkkur').offsetHeight - 70;
+    var iconContainerHeight = 90;
+    var marginHeight = 30;
+    var scrollHeight = document.getElementById('umOkkur').offsetHeight - (iconContainerHeight + marginHeight);
     var isExpanded = true;
     $(window).scroll(function() {
 
