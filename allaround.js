@@ -28,18 +28,17 @@ $(document).ready(function() {
       }
 
     function onScroll() {
-        scroll = $(window).scrollTop();
-        iconContainer.toggleClass('icon-container--small', scroll >= scrollHeight);    
-        icon.toggleClass('icon--small', scroll >= scrollHeight);
-
-        var breakpoint = window.pageYOffset + 0.5 * winHeight;
-
+        var breakpoint = window.pageYOffset + (0.5 * winHeight);
         reveals.forEach(function(reveal) {
             reveal.classList.toggle(
                 'isVisible', 
                 reveal._top <= breakpoint
             )
         });
+        
+        scroll = $(window).scrollTop();
+        iconContainer.toggleClass('icon-container--small', scroll >= scrollHeight);    
+        icon.toggleClass('icon--small', scroll >= scrollHeight);
     }
 
     window.addEventListener('resize', onResize)

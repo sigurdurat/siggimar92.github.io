@@ -37,8 +37,6 @@ a:hover {
   margin: 50px auto;
   overflow: hidden;
   display: block;
-  transform: translateY(200%);
-  transition: transform 600ms;
 }
 
 .main {
@@ -142,6 +140,8 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transform: translateY(200%);
+  transition: transform 600ms;
 }
 
 .image-section > img {
@@ -152,16 +152,14 @@ a:hover {
   margin: 0 auto;
 }
 
-.isVisible {
-  transform: translateY(0);
-}
-
 .text-section {
   width: 58%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transform: translateY(200%);
+  transition: transform 600ms;
 }
 
 .um-okkur {
@@ -374,6 +372,10 @@ a:hover {
   padding-left: 20px;
   padding-right: 20px;
   text-align: center; 
+}
+
+.isVisible > .image-section, .isVisible > .text-section {
+  transform: translateY(0);
 }
 
 /* .author-info {
