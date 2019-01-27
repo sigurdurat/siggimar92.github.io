@@ -1,42 +1,50 @@
 'use strict';
 
 $(document).ready(function() {
-
-    $('html, body').animate({
-        scrollTop: 0
-    }, 800);
-
     var iconContainerHeight = 90;
     var marginHeight = 30;
-    var scrollHeight = document.getElementById('umOkkur').offsetHeight - (iconContainerHeight + marginHeight);
-    var isExpanded = true;
-    $(window).scroll(function() {
+    var scrollHeight = $('#umOkkur').outerHeight() - (iconContainerHeight + marginHeight);
+    var iconContainer = $('.icon-container');
+    var icon = $('.icon');
+    var scroll = $(window).scrollTop();
+    var reveals = document.querySelectorAll('[data-reveal]');
+    var winHeight = 1;
 
-        if ($(window).scrollTop() > scrollHeight) {
-            $('.icon-container').addClass('icon-container--small');    
-            $('.icon').addClass('icon--small');
-            isExpanded = false;
-        }
-      
-        if (!isExpanded && $(window).scrollTop() < scrollHeight) {
-            $('.icon-container').removeClass('icon-container--small');    
-            $('.icon').removeClass('icon--small');
-            isExpanded = true;
-        }
-      
-    });
+    iconContainer.toggleClass('icon-container--small', scroll >= scrollHeight);    
+    icon.toggleClass('icon--small', scroll >= scrollHeight);
 
-    $('.icon-container').on('click', function() {
+    iconContainer.on('click', function() {
         $('html, body').animate({
             scrollTop: 0
         }, 800);
     });
 
+    function onResize() {
+        winHeight = window.innerHeight
+        reveals.forEach(function(reveal) {
+          var { top } = reveal.getBoundingClientRect()
+          reveal._top = top
+        });
+      }
+
+    function onScroll() {
+        scroll = $(window).scrollTop();
+        iconContainer.toggleClass('icon-container--small', scroll >= scrollHeight);    
+        icon.toggleClass('icon--small', scroll >= scrollHeight);
+
+        var breakpoint = window.pageYOffset + 0.5 * winHeight;
+
+        reveals.forEach(function(reveal) {
+            reveal.classList.toggle(
+                'isVisible', 
+                reveal._top <= breakpoint
+            )
+        });
+    }
+
+    window.addEventListener('resize', onResize)
+    window.addEventListener('scroll', onScroll);
+    
+    onResize();
+    onScroll();
 });
-
-
-
-// $('#link').click(function(e){
-//     var $target = $('html,body');
-//     $target.animate({scrollTop: $target.height()}, 500);
-//   });
