@@ -329,4 +329,19 @@ hr {
   .icon-container--small {
     width: 70px;
   }
+
+  .contactBtn {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    height: 80px;
+    width: 80px;
+  }
+  
+  .contact-icon-container > svg {
+    height: 80px;
+    width: 40px !important;
+    /* color: #f94545; */
+  }
+  
 }
