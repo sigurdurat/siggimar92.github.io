@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="455px" height="401px" viewBox="0 0 455 401" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>whiteNoBg</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Custom-Preset" transform="translate(-28.000000, -55.000000)">
+            <g id="whiteNoBg" transform="translate(28.000000, 39.000000)">
+                <g id="Rectangle-2" transform="translate(84.500000, 162.500000) rotate(22.500000) translate(-84.500000, -162.500000) translate(63.000000, -4.000000)">
+                    <g id="path-1-link" fill="#FFFFFF">
+                        <polygon id="path-1" points="0.234764029 17.702306 42.0367717 0.320235123 42.3906863 315.350558 0.101328886 332.935278"></polygon>
+                    </g>
+                    <polygon id="Shape" stroke="#FFFFFF" points="0.541819657 17.908364 0.408667086 332.473743 42.0833119 315.144633 41.7301467 0.781473238"></polygon>
+                </g>
+                <g id="Rectangle-2" transform="translate(371.500000, 271.000000) rotate(22.500000) translate(-371.500000, -271.000000) translate(350.000000, 104.000000)">
+                    <g id="path-2-link" fill="#FFFFFF">
+                        <polygon id="path-2" points="0.492789829 17.8010597 42.2947975 0.399016403 42.6487121 315.791316 0.359354686 333.396242"></polygon>
+                    </g>
+                    <polygon id="Shape" stroke="#FFFFFF" points="0.799845457 18.0073544 0.666692886 332.934176 42.3413377 315.585154 41.9881725 0.860784059"></polygon>
+                </g>
+                <g id="Rectangle-2" transform="translate(227.849105, 216.723711) rotate(-22.500000) translate(-227.849105, -216.723711) translate(205.849105, 9.223711)">
+                    <g id="path-3-link" transform="translate(0.995618, 0.004344)" fill="#EAEAEA">
+                        <polygon id="path-3" points="0.312203343 42.0508638 41.2530256 0.349124725 42.5685967 372.774183 0.446855975 414.385477"></polygon>
+                    </g>
+                    <polygon id="Shape" stroke="#EAEAEA" points="1.25304196 41.7213625 1.49611229 414.192197 43.2123766 372.511489 42.18331 0.696447899"></polygon>
+                </g>
+                <g id="Rectangle-2" transform="translate(226.500000, 216.000000) rotate(90.000000) translate(-226.500000, -216.000000) translate(205.000000, 62.000000)">
+                    <g id="path-4-link" fill="#FFFFFF">
+                        <polygon id="path-4" points="0.483143086 0.273844096 42.6390654 2.8489784 42.6390654 307.763537 0.483143086 307.763537"></polygon>
+                    </g>
+                    <polygon id="Shape" stroke="#FFFFFF" points="0.790285943 0.601793114 0.790285943 307.45492 42.3319225 307.45492 42.3319225 3.13940326"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

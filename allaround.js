@@ -2,16 +2,18 @@
 
 $(document).ready(function() {
     var iconContainerHeight = 90;
-    var marginHeight = 30;
+    var marginHeight = 50;
     var scrollHeight = $('#umOkkur').outerHeight() - (iconContainerHeight + marginHeight);
     var iconContainer = $('.icon-container');
     var icon = $('.icon');
     var scroll = $(window).scrollTop();
-    var reveals = document.querySelectorAll('[data-reveal]');
-    var winHeight = 1;
 
     iconContainer.toggleClass('icon-container--small', scroll >= scrollHeight);    
     icon.toggleClass('icon--small', scroll >= scrollHeight);
+
+    setTimeout(function() {
+        $('hr').addClass('grow');
+    }, 275);
 
     iconContainer.on('click', function() {
         $('html, body').animate({
@@ -19,31 +21,20 @@ $(document).ready(function() {
         }, 800);
     });
 
-    function onResize() {
-        winHeight = window.innerHeight
-        reveals.forEach(function(reveal) {
-          var { top } = reveal.getBoundingClientRect()
-          reveal._top = top
-        });
-      }
-
     function onScroll() {
-        var breakpoint = window.pageYOffset + (0.5 * winHeight);
-        reveals.forEach(function(reveal) {
-            reveal.classList.toggle(
-                'isVisible', 
-                reveal._top <= breakpoint
-            )
-        });
-        
         scroll = $(window).scrollTop();
         iconContainer.toggleClass('icon-container--small', scroll >= scrollHeight);    
+        iconContainer.toggleClass('dark-grey', scroll >= scrollHeight);    
         icon.toggleClass('icon--small', scroll >= scrollHeight);
     }
 
-    window.addEventListener('resize', onResize)
     window.addEventListener('scroll', onScroll);
     
-    onResize();
     onScroll();
 });
+
+
+// $('#link').click(function(e){
+//     var $target = $('html,body');
+//     $target.animate({scrollTop: $target.height()}, 500);
+//   });
