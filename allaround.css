@@ -39,13 +39,15 @@ hr {
   border: none;
   padding: 2px 0;
   background-color: #ffffff;
-  -webkit-transition: width 1s ease-out; /* For Safari 3.1 to 6.0 */
-  transition: width 1s  ease-out;
-  width : 0%;
+  -webkit-transition: transform 1s ease-out;
+  transition: transform 1s  ease-out;
+  width : 50%;
+  transform: scaleX(0);
 }
 
 .grow{
-  width: 50%;
+  /* width: 50%; */
+  transform: scaleX(1);
 }
 
 .hide {
@@ -238,7 +240,7 @@ hr {
 }
 
 .vefsidurImg {
-  background-image: url(img/verkefni.png);
+  background-image: url(img/verkefni.jpg);
     background-position-x: center;
     background-position-y: center;
     background-repeat: no-repeat;
