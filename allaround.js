@@ -26,6 +26,12 @@ $(document).ready(function() {
         iconContainer.toggleClass('icon-container--small', scroll >= scrollHeight);    
         iconContainer.toggleClass('dark-grey', scroll >= scrollHeight);    
         icon.toggleClass('icon--small', scroll >= scrollHeight);
+
+        var scrolled = $(this).scrollTop();
+        $('.um-okkur-container').css({
+          'transform': 'translate3d(0, ' + (scrolled * 0.20) + 'px, 0)', // parallax (20% scroll rate)
+          'opacity': 1 - scrolled / 400 // fade out
+        });      
     }
 
     window.addEventListener('scroll', onScroll);
